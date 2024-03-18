@@ -25,12 +25,11 @@ int main(int argc, char const *argv[])
 
         Sensor sensor;
         tree nodeTree;
-        PGconn *con = attributeTable::connect();
         if(attrIds.attrVector.size() == 1){
-            nodeTree = sensor.createOneTree(attrIds.attrVector[0], con);
+            nodeTree = sensor.createOneTree(attrIds.attrVector[0]);
         }
         else{
-            nodeTree = sensor.createManyTrees(attrIds.attrVector, con);  
+            nodeTree = sensor.createManyTrees(attrIds.attrVector);  
         }   
         boost::asio::streambuf sendBuffer;
         ostream sendStream(&sendBuffer);

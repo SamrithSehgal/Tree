@@ -14,7 +14,8 @@ PGconn* attributeTable::connect() {
     return conn;
 }
 
-void attributeTable::addAttr(std::map<std::string, std::string> info, PGconn *conn) {
+void attributeTable::addAttr(std::map<std::string, std::string> info) {
+    PGconn *conn = connect();
     for (const auto &[k, v] : info) {
         std::string query = "INSERT INTO attributes(NAME, TYPE) VALUES('" + k + "', '" + v + "')";
         PGresult *res = PQexec(conn, query.c_str());
@@ -27,7 +28,8 @@ void attributeTable::addAttr(std::map<std::string, std::string> info, PGconn *co
     }
 }
 
-void attributeTable::createTable(PGconn *conn) {
+void attributeTable::createTable() {
+    PGconn *conn = connect();
     const char *query = "CREATE TABLE attributes (ID SERIAL PRIMARY KEY NOT NULL, NAME VARCHAR(255) UNIQUE NOT NULL, TYPE VARCHAR(255) NOT NULL)";
     PGresult *res = PQexec(conn, query);
     if (PQresultStatus(res) != PGRES_COMMAND_OK) {

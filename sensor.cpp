@@ -1,6 +1,7 @@
 #include "./include/sensor.h"
 
-tree Sensor::createManyTrees(vector<vector<int>> listOfAttrs, PGconn* con){
+tree Sensor::createManyTrees(vector<vector<int>> listOfAttrs){
+    PGconn* con = attributeTable::connect();
     PGresult* results = PQexec(con, "SELECT * FROM attributes;");
     if(PQresultStatus(results) != PGRES_TUPLES_OK){
         cerr << "Query failed: " << PQresultErrorMessage(results) << endl;
@@ -43,7 +44,8 @@ tree Sensor::createManyTrees(vector<vector<int>> listOfAttrs, PGconn* con){
     return nodeTree;
 }
 
-tree Sensor::createOneTree(vector<int> requestedAttrs, PGconn* con){
+tree Sensor::createOneTree(vector<int> requestedAttrs){
+    PGconn* con = attributeTable::connect();
     PGresult* results = PQexec(con, "SELECT * FROM attributes;");
     if(PQresultStatus(results) != PGRES_TUPLES_OK){
         cerr << "Query failed: " << PQresultErrorMessage(results) << endl;
