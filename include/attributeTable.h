@@ -2,6 +2,7 @@
 #include <map>
 #include <string>
 #include <cstdlib> 
+#include <iostream>
 
 
 using namespace std;

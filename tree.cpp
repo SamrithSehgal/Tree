@@ -1,6 +1,5 @@
 #include "./include/tree.h"
 
-using namespace std;
 
 tree::Node::Node(const map<string, string>& data, map<string, int>& info){
     this->data = data;

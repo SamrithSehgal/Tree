@@ -1,5 +1,4 @@
 #include "./include/decode.h"
-#include <postgresql/libpq-fe.h>
 
 using namespace std;
 
