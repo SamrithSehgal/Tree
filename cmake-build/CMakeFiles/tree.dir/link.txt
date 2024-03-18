@@ -1,0 +1,1 @@
+g++ -rdynamic CMakeFiles/tree.dir/attributeTable.o CMakeFiles/tree.dir/decode.o CMakeFiles/tree.dir/sensor.o CMakeFiles/tree.dir/tree.o CMakeFiles/tree.dir/treeMain.o -o tree  -Wl,-rpath,/home/samrith/anaconda3/lib /usr/lib/x86_64-linux-gnu/libpq.so /home/samrith/anaconda3/lib/libboost_system.so.1.73.0 /home/samrith/anaconda3/lib/libboost_serialization.so.1.73.0 

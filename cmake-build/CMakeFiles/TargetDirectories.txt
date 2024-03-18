@@ -1,0 +1,5 @@
+/home/samrith/Downloads/Coding/UCI/cpp/cmake-build/CMakeFiles/tree.dir
+/home/samrith/Downloads/Coding/UCI/cpp/cmake-build/CMakeFiles/client.dir
+/home/samrith/Downloads/Coding/UCI/cpp/cmake-build/CMakeFiles/server.dir
+/home/samrith/Downloads/Coding/UCI/cpp/cmake-build/CMakeFiles/edit_cache.dir
+/home/samrith/Downloads/Coding/UCI/cpp/cmake-build/CMakeFiles/rebuild_cache.dir

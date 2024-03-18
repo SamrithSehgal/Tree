@@ -1,0 +1,1 @@
+g++ -rdynamic CMakeFiles/client.dir/client.o CMakeFiles/client.dir/attributeTable.o CMakeFiles/client.dir/decode.o CMakeFiles/client.dir/sensor.o CMakeFiles/client.dir/tree.o -o client  -Wl,-rpath,/home/samrith/anaconda3/lib /usr/lib/x86_64-linux-gnu/libpq.so /home/samrith/anaconda3/lib/libboost_system.so.1.73.0 /home/samrith/anaconda3/lib/libboost_serialization.so.1.73.0 

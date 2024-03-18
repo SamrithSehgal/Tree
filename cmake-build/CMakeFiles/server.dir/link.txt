@@ -1,0 +1,1 @@
+g++ -rdynamic CMakeFiles/server.dir/server.o CMakeFiles/server.dir/attributeTable.o CMakeFiles/server.dir/decode.o CMakeFiles/server.dir/sensor.o CMakeFiles/server.dir/tree.o -o server  -Wl,-rpath,/home/samrith/anaconda3/lib /usr/lib/x86_64-linux-gnu/libpq.so /home/samrith/anaconda3/lib/libboost_system.so.1.73.0 /home/samrith/anaconda3/lib/libboost_serialization.so.1.73.0 
